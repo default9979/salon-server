@@ -3,9 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors({
-  origin: 'https://my-site-snowy-nine.vercel.app'
-}));
+app.use(cors());
 app.use(express.json());
 
 app.post('/send', async function(req, res) {
